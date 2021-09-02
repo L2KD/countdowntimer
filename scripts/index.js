@@ -39,7 +39,7 @@ var x = setInterval(function() {
         content.style.textAlign = "center";
         content.innerHTML = "Happy birthday";
         if (isShow) {
-            content.style.color = "red";
+            content.style.color = "white";
             isShow = false;
         } else {
             content.style.color = "black";
