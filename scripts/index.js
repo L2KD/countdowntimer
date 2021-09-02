@@ -11,6 +11,7 @@ var x = setInterval(function() {
     const timeToEnd = new Date();
 
     timeToEnd.setHours(hourVal, minuteVal, 0, 0);
+    if (hourVal == 0 && minuteVal == 0) return;
     if (!isRun) return;
 
     // Get today's date and time
