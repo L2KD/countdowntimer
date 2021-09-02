@@ -33,7 +33,7 @@ var x = setInterval(function() {
         // clearInterval(x);
         const content = document.getElementById("content");
         const timer = document.getElementById("timer");
-        timer.style.borderColor = "red";
+        timer.style.borderColor = "white";
         content.style.fontSize = "170px";
         content.style.display = "block";
         content.style.textAlign = "center";
