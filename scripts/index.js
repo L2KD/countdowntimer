@@ -67,12 +67,11 @@ var x = setInterval(function() {
 const buttonSet = document.getElementById("input-set");
 
 buttonSet.onclick = function () {
-   isRun = !isRun;
-
     const hourVal = document.getElementById("input-hour").value;
     const minuteVal = document.getElementById("input-minute").value;
-
     if (hourVal == 0 && minuteVal == 0) return;
+
+    isRun = !isRun;
 
     if (hourVal > 23 || hourVal < 0) {
         alert("Hour must be greater than or equal 0 and less than or equal 23.");
