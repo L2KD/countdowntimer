@@ -37,7 +37,7 @@ var x = setInterval(function() {
         content.style.fontSize = "170px";
         content.style.display = "block";
         content.style.textAlign = "center";
-        content.innerHTML = "Happy birthday";
+        content.innerHTML = "Happy birthday <br /> Khai Trieu";
         if (isShow) {
             content.style.color = "white";
             isShow = false;
