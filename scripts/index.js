@@ -33,7 +33,7 @@ var x = setInterval(function() {
     curSecond = sumSecond % 60;
     console.log(curMinute);
 
-    const hourElement = document.getElementById("hour");
+    // const hourElement = document.getElementById("hour");
     const minuteElement = document.getElementById("minute");
     const secondElement = document.getElementById("second");
 
@@ -55,18 +55,18 @@ var x = setInterval(function() {
             isShow = true;
         }
     } else if (sumSecond >= 0) {
-        hourElement.innerHTML = (0 < 10 ? "0" + 0 : 0);
+        // hourElement.innerHTML = (0 < 10 ? "0" + 0 : 0);
         minuteElement.innerHTML = (curMinute < 10 ? "0" + curMinute : curMinute);
         secondElement.innerHTML = (curSecond < 10 ? "0" + curSecond : curSecond);
 
-        const dot1 = document.getElementById("dot-1");
+        // const dot1 = document.getElementById("dot-1");
         const dot2 = document.getElementById("dot-2");
         if (isShow) {
-            dot1.style.color = "red";
+            // dot1.style.color = "red";
             dot2.style.color = "red";
             isShow = false;
         } else {
-            dot1.style.color = "black";
+            // dot1.style.color = "black";
             dot2.style.color = "black";
             isShow = true;
         }
