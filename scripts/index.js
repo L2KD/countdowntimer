@@ -2,6 +2,10 @@ let isShow = true;
 let isRun = false;
 let showForm = true;
 
+let sumSecond = 0;
+let curMinute = 0;
+let curSecond = 0;
+
 // Update the count down every 1 second
 var x = setInterval(function() {
     const hourVal = document.getElementById("input-hour").value;
@@ -11,7 +15,7 @@ var x = setInterval(function() {
     const timeToEnd = new Date();
 
     timeToEnd.setHours(hourVal, minuteVal, 0, 0);
-    if (!isRun) return;
+    if (hourVal == 0 && minuteVal == 0) return;
 
     // Get today's date and time
     var now = new Date().getTime();
@@ -20,16 +24,21 @@ var x = setInterval(function() {
     var distance = timeToEnd - now;
 
     // Time calculations for days, hours, minutes and seconds
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    // var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    // var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // const sumSecond = hourVal * 60 + minuteVal;
+    curMinute = Math.floor(sumSecond / 60);
+    curSecond = sumSecond % 60;
+    console.log(curMinute);
 
     const hourElement = document.getElementById("hour");
     const minuteElement = document.getElementById("minute");
     const secondElement = document.getElementById("second");
 
     // If the count down is finished, write some text
-    if (distance < 0 && isRun) {
+    if (sumSecond <= 0 && isRun) {
         // clearInterval(x);
         const content = document.getElementById("content");
         const timer = document.getElementById("timer");
@@ -45,10 +54,10 @@ var x = setInterval(function() {
             content.style.color = "black";
             isShow = true;
         }
-    } else if (distance >= 0) {
-        hourElement.innerHTML = (hours < 10 ? "0" + hours : hours);
-        minuteElement.innerHTML = (minutes < 10 ? "0" + minutes : minutes);
-        secondElement.innerHTML = (seconds < 10 ? "0" + seconds : seconds);
+    } else if (sumSecond >= 0) {
+        hourElement.innerHTML = (0 < 10 ? "0" + 0 : 0);
+        minuteElement.innerHTML = (curMinute < 10 ? "0" + curMinute : curMinute);
+        secondElement.innerHTML = (curSecond < 10 ? "0" + curSecond : curSecond);
 
         const dot1 = document.getElementById("dot-1");
         const dot2 = document.getElementById("dot-2");
@@ -63,7 +72,7 @@ var x = setInterval(function() {
         }
     }
 
-
+    sumSecond -= 1;
 }, 1000);
 
 const buttonSet = document.getElementById("input-set");
@@ -72,6 +81,8 @@ buttonSet.onclick = function () {
     const hourVal = document.getElementById("input-hour").value;
     const minuteVal = document.getElementById("input-minute").value;
     if (hourVal == 0 && minuteVal == 0) return;
+
+    sumSecond = hourVal * 60 + parseInt(minuteVal);
 
     isRun = !isRun;
 
@@ -86,11 +97,11 @@ buttonSet.onclick = function () {
         return;
     }
 
-   if (isRun) {
-       alert("Countdown start !!!");
-   } else {
-       alert("Countdown stop !!!");
-   }
+   // if (isRun) {
+   //     alert("Countdown start !!!");
+   // } else {
+   //     alert("Countdown stop !!!");
+   // }
 }
 
 const wrapper = document.getElementById("wrapper");
