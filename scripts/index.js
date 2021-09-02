@@ -32,10 +32,12 @@ var x = setInterval(function() {
     if (distance < 0 && isRun) {
         // clearInterval(x);
         const content = document.getElementById("content");
+        const timer = document.getElementById("timer");
+        timer.style.borderColor = "red";
         content.style.fontSize = "170px";
         content.style.display = "block";
         content.style.textAlign = "center";
-        content.innerHTML = "Happy birthday <br/> !!!";
+        content.innerHTML = "Happy birthday";
         if (isShow) {
             content.style.color = "red";
             isShow = false;

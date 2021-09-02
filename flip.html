@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlipDown Example</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/flipdown/flipdown.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script type="text/javascript" src="scripts/flipdown/flipdown.js"></script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div id="flipdown" class="flipdown"></div>
+    </div>
+    <br />
+    <div id="form1" class="form1">
+        <div class="row-input">
+            <div class="input-hour">
+                <span class="title">Hour</span>
+                <br />
+                <input id="input-hour" class="input-time" type="number" min="0" max="23" value="0" aria-controls="false" />
+            </div>
+            <div class="input-minute">
+                <span class="title">Minute</span>
+                <br />
+                <input id="input-minute" class="input-time" type="number" min="0" max="59" value="0" />
+            </div>
+        </div>
+        <div class="row-button">
+            <input id="input-set" class="input-set" type="button" value="Start countdown" />
+        </div>
+    </div>
+    <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
