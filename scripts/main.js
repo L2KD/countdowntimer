@@ -35,17 +35,7 @@
 // });
 let isRun = false;
 const buttonSet = document.getElementById("input-set");
-
-let flipdown = new FlipDown(new Date().getTime()/1000,
-    {
-      theme: "light"
-    })
-    .start();
-const listRoto = document.getElementsByClassName("rotor-group");
-if (listRoto.length > 0) {
-  listRoto[0].style.visibility = 'hidden';
-  listRoto[0].style.width = '0';
-}
+let showForm = true;
 
 buttonSet.onclick = function () {
   const hourVal = document.getElementById("input-hour").value;
@@ -83,3 +73,17 @@ buttonSet.onclick = function () {
     }
   isRun = true;
 }
+
+const wrapper = document.getElementById("wrapper");
+const form1 = document.getElementById("form1");
+form1.hidden = true;
+
+wrapper.onclick = function () {
+  if (showForm) {
+    form1.hidden = false;
+  } else {
+    form1.hidden = true;
+  }
+  showForm = !showForm;
+}
+
