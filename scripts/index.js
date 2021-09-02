@@ -11,7 +11,6 @@ var x = setInterval(function() {
     const timeToEnd = new Date();
 
     timeToEnd.setHours(hourVal, minuteVal, 0, 0);
-    if (hourVal == 0 && minuteVal == 0) return;
     if (!isRun) return;
 
     // Get today's date and time
@@ -72,6 +71,8 @@ buttonSet.onclick = function () {
 
     const hourVal = document.getElementById("input-hour").value;
     const minuteVal = document.getElementById("input-minute").value;
+
+    if (hourVal == 0 && minuteVal == 0) return;
 
     if (hourVal > 23 || hourVal < 0) {
         alert("Hour must be greater than or equal 0 and less than or equal 23.");
