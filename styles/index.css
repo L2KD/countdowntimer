@@ -1,0 +1,116 @@
+@font-face {
+    font-family: digital-7;
+    src: url(../fonts/digital-7.ttf);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background: black;
+}
+
+.timer {
+    position: relative;
+    width: auto;
+    height: 400px;
+    padding: 20px;
+    border-style: dotted;
+    border-color: white;
+    border-width: 5px;
+    border-radius: 20px;
+}
+
+.timer > .content {
+    font-family: digital-7;
+    display: flex;
+    color: white;
+    font-size: 350px;
+    margin-top: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.timer > .content > .dot {
+    color: red;
+}
+
+.form1 {
+    margin: auto;
+    width: 400px;
+    height: 180px;
+    background: bisque;
+    border: solid 1px red;
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+.form1 > .row-input {
+    display: flex;
+    width: 100%;
+}
+
+.form1 > .row-input > .input-hour {
+    width: 50%;
+    text-align: center;
+}
+
+.form1 > .row-input > .input-hour > .title{
+    font-family: digital-7;
+    color: red;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.form1 > .row-input > .input-minute {
+    width: 50%;
+    text-align: center;
+}
+
+.form1 > .row-input > .input-minute > .title{
+    font-family: digital-7;
+    color: red;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.form1 .row-input .input-time {
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px red;
+    text-align: center;
+    color: darkblue;
+    font-family: digital-7;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.form1 > .row-button {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.form1 > .row-button > .input-set {
+    width: auto;
+    height: 70px;
+    font-weight: bold;
+    font-family: digital-7;
+    color: red;
+    font-size: 40px;
+    border-radius: 10px;
+    border: solid 1px red;
+}

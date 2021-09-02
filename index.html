@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="wrapper" class="wrapper">
+        <div id="timer" class="timer">
+            <div id="content" class="content">
+                <span id="hour" class="hour">00</span>
+                <span id="dot-1" class="dot">:</span>
+                <span id="minute" class="minute">00</span>
+                <span id="dot-2" class="dot">:</span>
+                <span id="second" class="second">00</span>
+            </div>
+            <i class="fas fa-birthday-cake"></i>
+        </div>
+    </div>
+    <br />
+    <div id="form1" class="form1">
+        <div class="row-input">
+            <div class="input-hour">
+                <span class="title">Hour</span>
+                <br />
+                <input id="input-hour" class="input-time" type="number" min="0" max="23" value="0" aria-controls="false" />
+            </div>
+            <div class="input-minute">
+                <span class="title">Minute</span>
+                <br />
+                <input id="input-minute" class="input-time" type="number" min="0" max="59" value="0" />
+            </div>
+        </div>
+        <div class="row-button">
+            <input id="input-set" class="input-set" type="button" value="Start countdown" />
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
